@@ -1,0 +1,18 @@
+
+<div class="container w-75">
+<%# um banner %>
+  <img src="https://images.unsplash.com/photo-1627133805103-ce2d34ccdd37?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="img-fluid" alt="Responsive image">
+<%# um card para cada lista %>
+  <div>
+  <h2>My List</h2>
+  <%= link_to "Create a movie list", new_list_path, class: "btn btn-primary"%>
+    <% @lists.each do |list| %>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="..." alt="Card image cap">
+      </div>
+      <div class="card-body">
+        <p class="card-text"><%= link_to list.name, list_path(list) %></p>
+      </div>
+  <% end %>
+  </div>
+</div>

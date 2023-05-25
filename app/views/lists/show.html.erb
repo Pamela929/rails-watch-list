@@ -1,0 +1,12 @@
+<%= @list.name %>
+<ol><li>
+<% @list.movies.each do |movie| %>
+  <%= "Tittle: #{movie.title}" %>
+  <br>
+  <%= "Rating: #{movie.rating}" %>
+  <br>
+  <%= "Overview: #{movie.overview}" %>
+<% end %>
+</li></ol>
+
+<%= link_to "Back to lists", lists_path %>
