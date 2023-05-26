@@ -5,14 +5,16 @@
 <%# um card para cada lista %>
   <div>
   <h2>My List</h2>
-  <%= link_to "Create a movie list", new_list_path, class: "btn btn-primary"%>
-    <% @lists.each do |list| %>
-      <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="..." alt="Card image cap">
-      </div>
-      <div class="card-body">
-        <p class="card-text"><%= link_to list.name, list_path(list) %></p>
-      </div>
-  <% end %>
+  <div>
+    <%= link_to "Create a movie list", new_list_path, class: "btn btn-primary"%>
+      <% @lists.each do |list| %>
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="..." alt="Card image cap">
+        </div>
+        <div class="card-body">
+          <p class="card-text"><%= link_to list.name, list_path(list) %></p>
+        </div>
+      <% end %>
+  </div>
   </div>
 </div>
